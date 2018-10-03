@@ -4,7 +4,7 @@ if (isset($_GET['apagar'])) {
 	if ($_GET['apagar'] == "post") {
 		$id     = $_GET['id'];
 		$query  = "DELETE FROM postagens WHERE id='$id'";
-		$result = mysqli_query($conn, $sql);
+		$result = mysqli_query($conn, $query);
 
 		if (mysqli_query($conn, $query)) {?>
 			<div class="alert alert-success" role="alert">Postagem apagada com sucesso</div>
@@ -15,7 +15,7 @@ if (isset($_GET['apagar'])) {
 	} else if ($_GET['apagar'] == "author") {
 		$id     = $_GET['id'];
 		$query  = "DELETE FROM autores WHERE id='$id'";
-		$result = mysqli_query($conn, $sql);
+		$result = mysqli_query($conn, $query);
 
 		if (mysqli_query($conn, $query)) {?>
 			<div class="alert alert-success" role="alert">Autor apagado com sucesso</div>
@@ -26,7 +26,7 @@ if (isset($_GET['apagar'])) {
 	} else if ($_GET['apagar'] == "category") {
 		$id     = $_GET['id'];
 		$query  = "DELETE FROM categorias WHERE id='$id'";
-		$result = mysqli_query($conn, $sql);
+		$result = mysqli_query($conn, $query);
 
 		if (mysqli_query($conn, $query)) {?>
 			<div class="alert alert-success" role="alert">Categoria apagada com sucesso</div>
